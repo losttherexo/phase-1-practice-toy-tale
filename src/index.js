@@ -13,3 +13,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+fetch("http://localhost:3000/toys")
+  .then(r => r.json())
+  .then(data => {
+    const toyContainer = document.querySelector(".container")
+    const createCard = (data) => {
+      const newDiv = document.createElement("div")
+      newDiv.className = "card"
+      const toyName = document.createElement("h2")
+      const toyImage = document.createElement("img")
+      const toyLikes = document.createElement("p") 
+      const toyButton = document.createElement("button")
+      toyImage.src = toys.image
+      toyContainer.append("toyImage")
+
+    }
+  })
